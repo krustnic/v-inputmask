@@ -9,9 +9,14 @@
   "keywords": [
     "vue",
     "directive",
-    "mask"
+    "mask",
+    "inputmask"
   ],
-  "author": "avmityakov@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krustnic/v-inputmask"
+  },
+  "author": "Mityakov Aleksandr <avmityakov@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "inputmask": "^3.3.7"
