@@ -1,0 +1,19 @@
+{
+  "name": "v-inputmask",
+  "version": "1.0.0",
+  "description": "Input mask directive for Vue 2.* based on jquery.inputmask",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "directive",
+    "mask"
+  ],
+  "author": "avmityakov@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "inputmask": "^3.3.7"
+  }
+}
