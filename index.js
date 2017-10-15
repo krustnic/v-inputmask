@@ -1,11 +1,11 @@
 import Inputmask from 'inputmask';
 
-const Settings = {
-    getInputMaskOptions(binding) {
+var Settings = {
+    getInputMaskOptions : function(binding) {
         return binding.value;
     },
 
-    getTargetElement(sourceEl) {
+    getTargetElement : function(sourceEl) {
         if (sourceEl.tagName === 'INPUT') {
             return sourceEl;
         }
@@ -19,26 +19,26 @@ const Settings = {
 };
 
 export default {
-    install (Vue) {
+    install : function(Vue) {
         Vue.directive('inputmask', {
             bind: function (el, binding, vnode) {
-                let inputEl = Settings.getTargetElement(el);
-                let maskOptions = Settings.getInputMaskOptions(binding);
+                var inputEl = Settings.getTargetElement(el);
+                var maskOptions = Settings.getInputMaskOptions(binding);
 
                 Inputmask(maskOptions).mask(inputEl);
             },
 
             unbind: function (el, binding, vnode) {
-                let inputEl = Settings.getTargetElement(el);
+                var inputEl = Settings.getTargetElement(el);
 
                 if ( inputEl.inputmask ) {
                     inputEl.inputmask.remove();
                 }
             },
 
-            componentUpdated(el, binding){
-                let inputEl = Settings.getTargetElement(el);
-                let maskOptions = Settings.getInputMaskOptions(binding);
+            componentUpdated: function(el, binding){
+                var inputEl = Settings.getTargetElement(el);
+                var maskOptions = Settings.getInputMaskOptions(binding);
 
                 if ( binding.value !== binding.oldValue ) {
                     if ( inputEl.inputmask ) {

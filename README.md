@@ -4,6 +4,12 @@ It's wrapper for [jquery.inputmask](https://github.com/RobinHerbots/Inputmask) l
 
 ## Example
 
+Install:
+
+```sh
+npm install v-inputmask --save
+```
+
 Exmaple for [Elements UI](http://element.eleme.io/#/en-US):
 
 ```javascript
